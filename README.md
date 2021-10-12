@@ -17,6 +17,7 @@ similarity_scores_list=similarity_scores.flatten()
 index=index_sort(similarity_scores_list)
 
 In this method the scores that are obtained for the sentences that are similar, are made into a list and arranged in descending order by the next section of code:
+```
 def index_sort(list_var):
   length = len(list_var)
   list_index = list(range(0,length))
@@ -29,7 +30,7 @@ def index_sort(list_var):
              list_index[i] = list_index[j]
              list_index[j] = temp
   return list_index          
-
+```
 if no matching sentence was found, the bot will respond with ”I apologise, I don’t understand” . If, however, a response is found, then the response with the highest similarity score will be displayed as the output to the user’s query.
 There are a few responses that are hardcoded into the program, so as to make the bot seem more human and real. Now the flow for the final program will be as follows:
 1.	User connects to doc bot
